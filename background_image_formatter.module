@@ -120,6 +120,9 @@ function background_image_formatter_field_formatter_view($entity_type, $entity, 
     $large_image_style_file_url = image_style_url($settings['large_image_style'], $item['uri']);
     $small_image_style_file_url = image_style_url($settings['small_image_style'], $item['uri']);
 
+    file_create_url($large_image_style_file_url);
+    file_create_url($small_image_style_file_url);
+    
     $theme_data = array(
       'background_image_selector' => $settings['background_image_selector'],
       'large_image_url' => $large_image_style_file_url,
